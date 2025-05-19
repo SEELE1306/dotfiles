@@ -20,8 +20,12 @@ alias ping='ping -c 10'
 alias less='less -R'
 alias multitail='multitail --no-repeat -c'
 #alias src='source ~/.config/fish/config.fish'
+
+# git aliases
 alias ga='git add .'
 alias gcom='git commit -m'
+alias gs='git status'
+alias glog='git log --oneline'
 
 # Alias's for multiple directory listing commands
 alias la='ls -Alh --color=always' # show hidden files
