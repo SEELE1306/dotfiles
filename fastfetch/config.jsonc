@@ -4,41 +4,74 @@
 		"type": "kitty",
 //		"width": 16,
 		"height": 12,
-		"source": "~/.config/fastfetch/yotsugi.png",
-//		"color": {
-//			"1": "38;2;135;165;170"
-//		},
+		"source": "~/.config/fastfetch/aoi.jpg",
 		"padding": {
-			"top": 3,
+			"top": 1,
 			"left": 3,
 		}
 	},
 	"display": {
+		"separator": null,
 		"color": {
-//			"keys": "38;2;135;165;170",
-//			"title": "38;2;135;165;170",
-			"keys": "38;2;80;195;192",
-			"title": "38;2;254;85;103",
-		}
+			"keys": "yellow",
+			"title": "green",
+		},
 	},
 	"modules": [
 		"break",
-		"title",
-		"separator",
-		{ "key": "host", "type": "host" },
-		{ "key": "distro", "type": "os" },
-		{ "key": "kernel", "type": "kernel" },
-		{ "key": "de", "type": "de" },
-//		"break",
-		{ "key": "term", "type": "terminal" },
-		{ "key": "font", "type": "terminalfont"},
-		{ "key": "pkg", "type": "packages" },
-		{ "key": "uptime", "type": "uptime" },
-//		"break",
-		{ "key": "cpu", "type": "cpu" },
-		{ "key": "gpu", "type": "gpu" },
-		{ "key": "ram", "type": "memory" },
-		{ "key": "disk", "type": "disk" },
-//		{ "key": "swap", "type": "swap"},
+		{
+			"format": "{#1;92}| {user-name-colored}{at-symbol-colored}{host-name-colored}{#1;92} | {#1;92}System Information",
+			"type": "title",
+		},
+//		"separator",
+		{ 
+			"key": "| Host     | ", 
+			"type": "host", 
+		},
+		{ 
+			"key": "| Distro   | ", 
+			"type": "os", 
+		},
+		{
+			"key": "| Kernel   | ",
+			"type": "kernel", 
+		},
+		{ 
+			"key": "| DE       | ", 
+			"type": "de",
+		},
+		{
+			"key": "| CPU      | ",
+			"type": "cpu",
+		},
+		{
+			"key": "| GPU      | ", 
+			"type": "gpu" 
+		},
+		{ 
+			"key": "| RAM      | ", 
+			"type": "memory", 
+		},
+		{
+			"key": "| Disk     | ",
+			"type": "disk", 
+			"folders": "/" 
+		},
+		{
+			"key": "| ZRAM     | ",
+			"type": "swap",
+		},
+		{
+			"key": "| Char     | ",
+			"type": "custom",
+			"format": "Aoi Aioi from Her Blue Sky",
+			"keyColor": "yellow",
+		},
+		{
+			"key": "| Photos   | ",
+			"type": "custom",
+			"format": "{#1;92}unsplash.com/@seele1306",
+			"keyColor": "green",
+		},
 	]
 }
