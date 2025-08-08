@@ -51,14 +51,13 @@ alias ga='git add .'
 alias gcom='git commit -m'
 alias gs='git status'
 alias glog='git log --oneline'
+alias gp='git push'
 
 # Change directory aliases
 alias home='cd ~'
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
 
 # Show all logs in /var/log
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
