@@ -1,0 +1,12 @@
+(defsrc
+   ralt rctl
+)
+
+(deflayer aulaf75fix
+   lalt ralt
+)
+
+(defcfg
+  process-unmapped-keys yes
+  linux-dev /dev/input/by-id/usb-Compx_2.4G_Wireless_Receiver-event-kbd
+)
