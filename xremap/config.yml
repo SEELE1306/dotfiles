@@ -1,0 +1,8 @@
+modmap:
+  - name: Aula F75 Fix
+    remap:
+        KEY_RIGHTALT: KEY_LEFTALT
+        KEY_RIGHTCTRL: KEY_RIGHTALT
+      
+    
+

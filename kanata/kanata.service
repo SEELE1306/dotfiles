@@ -1,0 +1,16 @@
+[Unit]
+Description=Kanata keyboard remapper Service
+Documentation=https://github.com/jtroo/kanata
+Requires=local-fs.target
+After=local-fs.target
+# https://github.com/jtroo/kanata/issues/1151#issuecomment-2348303772
+
+[Service]
+Type=simple
+ExecStartPre=/usr/sbin/modprobe uinput
+ExecStart=/bin/bash -c "exec /usr/bin/kanata -c /etc/kanata/kanata.kbd"
+# ExecStart=/usr/bin/sh -c "exec $HOME/.local/bin/kanata --cfg /etc/kanata/kanata-config.kbd"
+Restart=no
+
+[Install]
+WantedBy=sysinit.target
